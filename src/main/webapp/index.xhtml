@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:p="http://primefaces.org/ui"
+>
+  <h:head></h:head>
+  <body>
+    <h:form>
+      <p:outputLabel value="Nombres" />
+      <p:inputText value="#{ejemploBean.nombre}" />
+      <!-- la etiqueta update hace que actualice un componente en específico con AJAX -->
+      <p:commandButton value="Aceptar" actionListener="#{ejemploBean.aceptar()}" update="lblSaludo" />
+      <p:outputLabel id="lblSaludo" value="#{ejemploBean.saludo}"/>
+    </h:form>
+  </body>
+</html>
